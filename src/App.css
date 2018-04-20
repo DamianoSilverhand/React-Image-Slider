@@ -1,0 +1,37 @@
+
+.App{
+	text-align: center;
+	font-weight: bold;
+}
+.slide-arrow {
+	color: rgb(0, 4, 255);
+	cursor: pointer;
+	font-size: 2rem;
+	position: absolute;
+	top: 25%;
+}
+
+.slide-arrow.right {
+	right: 1rem;
+}
+
+.slide-arrow.left {
+	left: 1rem;
+}
+
+div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
+	padding: 10px;
+}
+
+.resize{
+	padding: 10px;
+	width:350px;
+	height:300px;
+	transition-duration: 0.5s;
+  }.resize:hover {
+	  background-color: rgba(255,255,255,1);
+	  color: white;
+	  font-size: 25px;
+	  border-radius: 4px;
+	  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.5), 20px 10px 50px 0 rgba(0,0,0,0.3);
+  }
