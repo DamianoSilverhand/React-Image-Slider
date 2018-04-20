@@ -11,7 +11,7 @@ export class Thumbnails extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            style : {backgroundColor: "blue"}
+            style : {background: "blue"}
         }
     }
     ChangeStyle(){
