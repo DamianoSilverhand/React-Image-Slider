@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import  {Liker} from './Liker';
+
 import street from './img/street.jpg';
 import sea from './img/sea.jpeg';
 import mountain from './img/mountain.jpeg';
@@ -9,7 +11,7 @@ import './App.css'
 
  
 
-export class Thumbnails extends React.Component {
+export class Thumbnails extends Component {
 
     constructor(props){
         super(props);
@@ -41,45 +43,33 @@ export class Thumbnails extends React.Component {
         
         }
 
-    likeThis(){
-        alert('Thank You for liking this image');
-    }
-
 	render () {
 		return (
             <div className="container">
             <div className="row">
               <div className = "col-md-4 hold card">
-                <img className = "resize" src={street}/>
-                <p className = "card-text"> I am a text</p>
-                <div className= "App">
-                <img onClick= {this.changeStyle.bind(this)} className = "like" src={this.state.image}/>
-                </div>
+                <img className = "resize" src={street} alt = "Street"/>
+                <Liker/>
               </div>
               <div className = "col-md-4 hold card">
-                <img className = "resize" src={sea}/>
-                <p className = "card-text"> I am a text</p>
-                <a><button onClick= {this.likeThis.bind(this)}><i className="fas fa-heart fa-3x"></i></button></a>
+                <img className = "resize" src={sea} alt = "Sea"/>
+                <Liker/>
               </div>
               <div className = "col-md-4 hold card">
-                <img className = "resize" src={mountain}/>
-                <p className = "card-text"> I am a text</p>
-                <a><button onClick= {this.likeThis.bind(this)}><i className="fas fa-heart fa-3x"></i></button></a>
+                <img className = "resize" src={mountain} alt = "Mountain"/>
+                <Liker/>
               </div>
               <div className = "col-md-4 hold card">
-              <img className = "resize" src={street}/>
-              <p className = "card-text"> I am a text</p>
-              <a><button onClick= {this.likeThis.bind(this)}><i className="fas fa-heart fa-3x"></i></button></a>
+              <img className = "resize" src={street} alt = "Street"/>
+              <Liker/>
             </div>
             <div className = "col-md-4 hold card">
-              <img className = "resize" src={sea}/>
-              <p className = "card-text"> I am a text</p>
-              <a><button onClick= {this.likeThis.bind(this)}><i className="fas fa-heart fa-3x"></i></button></a>
+              <img className = "resize" src={sea} alt = "Sea"/>
+              <Liker/>
             </div>
             <div className = "col-md-4 hold card">
-              <img className = "resize" src={mountain}/>
-              <p className = "card-text"> I am a text</p>
-              <a><button onClick= {this.likeThis.bind(this)}><i className="fas fa-heart fa-3x"></i></button></a>
+              <img className = "resize" src={mountain} alt = "Mountain"/>
+              <Liker/>
             </div>
             </div>
       

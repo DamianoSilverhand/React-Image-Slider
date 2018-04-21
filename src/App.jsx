@@ -6,18 +6,6 @@ import {Carousel} from './Slides';
 
 
 class App extends Component {
-// componentDidMount(){
-//   console.log('i have mount')
-// }
-// componentWillMount(){
-//   console.log('i will mount');
-// }
-// componentDidUpdate(){
-//   console.log('i updated');
-// }
-// componentWillReceiveProps(nextProps){
-//   console.log(nextProps);
-// }
   render() {
     console.log('i have mounted from render');
     return (
@@ -27,6 +15,7 @@ class App extends Component {
       </div>
     );
   }
+  
 }
 
 export default App;

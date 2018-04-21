@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Caption from './Caption'
 import art from './img/light.jpg'
 import food from './img/road.jpg'
 import car from './img/bridge.jpg'
@@ -14,7 +13,7 @@ export const caption = [
 	"Learn to draw lines where you must, but build bridges where you can "
 ];
 
-export class Carousel extends React.Component {
+export class Carousel extends Component {
 	constructor (props) {
 		super(props);
 
@@ -64,7 +63,7 @@ export class Carousel extends React.Component {
 		return (
 			<div className="carousel">
 				<Arrow direction="left" clickFunction={ this.previousSlide } glyph="&#9664;" />
-				<img src={imgUrls[this.state.currentImageIndex]} style={{width : 100 + "%", height: 40 + 'em'}}/>
+				<img src={imgUrls[this.state.currentImageIndex]} style={{width : 100 + "%", height: 40 + 'em'}} alt = "The Journey"/>
 				<p>{caption[this.state.currentWordIndex]}</p>
         <Arrow direction="right" clickFunction={ this.nextSlide } glyph="&#9654;" />
 			</div>
