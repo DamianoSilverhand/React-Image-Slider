@@ -1,47 +1,22 @@
 import React, { Component } from 'react';
 import  {Liker} from './Liker';
-
 import street from './img/street.jpg';
 import sea from './img/sea.jpeg';
 import mountain from './img/mountain.jpeg';
+import pather from './img/path.jpg';
+import walk from './img/walk.jpeg';
+import stream from './img/stream.jpeg';
+
+
+
 import blue from './img/blue.svg';
 import red from './img/red.svg';
-
-import './App.css'
+import './App.css';
 
  
-
+//Component for displaying image thumbnails
 export class Thumbnails extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            image : blue,
-            cls:"initial",
-            status: false
-
-        };
-    }
-
-    changeStyle(){
-        if(this.state.status===false){
-            this.setState({
-                image : red,
-                cls:"on",
-                status: true
-            });
-
-        }else{
-            this.setState({
-                image : blue,            
-                cls:"off",
-                status:false
-            });
-
-        }
-      
-        
-        }
 
 	render () {
 		return (
@@ -60,15 +35,15 @@ export class Thumbnails extends Component {
                 <Liker/>
               </div>
               <div className = "col-md-4 hold card">
-              <img className = "resize" src={street} alt = "Street"/>
+              <img className = "resize" src={pather} alt = "Street"/>
               <Liker/>
             </div>
             <div className = "col-md-4 hold card">
-              <img className = "resize" src={sea} alt = "Sea"/>
+              <img className = "resize" src={walk} alt = "Sea"/>
               <Liker/>
             </div>
             <div className = "col-md-4 hold card">
-              <img className = "resize" src={mountain} alt = "Mountain"/>
+              <img className = "resize" src={stream} alt = "Mountain"/>
               <Liker/>
             </div>
             </div>

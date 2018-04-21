@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-import art from './img/light.jpg'
-import food from './img/road.jpg'
-import car from './img/bridge.jpg'
+import light from './img/light.jpg'
+import road from './img/road.jpg'
+import bridge from './img/bridge.jpg'
 
- // export const random = imgUrls[Math.floor(Math.random()*imgUrls.length)];
+ //Carousel images
  export const imgUrls = [
-  art,food,car
+  light,road,bridge
 ];
+//Carousel Image Caption
 export const caption = [
 	"A man who builds a road to the Heavens must travel alone",
 	"Getting to your destination is important, but the route you take is equally important",
 	"Learn to draw lines where you must, but build bridges where you can "
 ];
 
+//This Component displays a carousel of images
 export class Carousel extends Component {
 	constructor (props) {
 		super(props);
@@ -25,7 +27,7 @@ export class Carousel extends Component {
 		this.nextSlide = this.nextSlide.bind(this);
 		this.previousSlide = this.previousSlide.bind(this);
 	}
-
+//Function for going to the previous image and caption using image and caption indices
 	previousSlide () {
 		const lastIndex = imgUrls.length - 1;
 		const { currentImageIndex } = this.state;
@@ -42,6 +44,8 @@ export class Carousel extends Component {
 		});
 	}
 
+//Function for going to the next image and caption using image and caption indices
+	
 	nextSlide () {
 		const lastIndex = imgUrls.length - 1;
 		const { currentImageIndex } = this.state;
@@ -52,7 +56,7 @@ export class Carousel extends Component {
 		const shouldResetWord = currentWordIndex === lastWord;
 		const word =  shouldResetWord ? 0 : currentWordIndex + 1;
 
-
+//setting initial image states
 		this.setState({
 			currentImageIndex: index,
 			currentWordIndex: word
@@ -71,7 +75,7 @@ export class Carousel extends Component {
 	}
 }
 
-
+//This component displays Arrows for changing images in the Carousel
 const Arrow = ({ direction, clickFunction, glyph }) => (
 <div
   className={ `slide-arrow ${direction}` }

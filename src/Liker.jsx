@@ -4,32 +4,32 @@ import red from './img/red.svg';
 
 import './App.css'
 
- 
+ //Component for displaying the like button
 
 export class Liker extends Component {
-
+//setting initial state of button and text
     constructor(props){
         super(props);
         this.state = {
             image : blue,
-            text:"Click To Like",
+            text:"Click Button To Like",
             status: false
 
         };
     }
-
+// This method changes button color and text when clicked
     changeStyle(){
         if(this.state.status===false){
             this.setState({
                 image : red,
-                text:"Click To Unlike",
+                text:"Click Button To Unlike",
                 status: true
             });
 
         }else{
             this.setState({
                 image : blue,
-                text:"Click To Like",
+                text:"Click Button To Like",
                 status:false
             });
 
@@ -37,10 +37,6 @@ export class Liker extends Component {
       
         
         }
-
-    likeThis(){
-        alert('Thank You for liking this image');
-    }
 
 	render () {
 		return (
