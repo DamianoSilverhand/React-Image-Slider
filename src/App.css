@@ -3,6 +3,9 @@
 	text-align: center;
 	font-weight: bold;
 }
+.form{
+	margin-top: 50px;
+}
 .slide-arrow {
 	color: rgb(0, 4, 255);
 	cursor: pointer;
