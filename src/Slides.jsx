@@ -67,7 +67,7 @@ export class Carousel extends Component {
 		return (
 			<div className="carousel">
 				<Arrow direction="left" clickFunction={ this.previousSlide } glyph="&#9664;" />
-				<img src={imgUrls[this.state.currentImageIndex]} style={{width : 100 + "%", height: 40 + 'em'}} alt = "The Journey"/>
+				<img src={imgUrls[this.state.currentImageIndex]} style={{width : 100 + "%", height: 20 + 'em'}} alt = "The Journey"/>
 				<p>{caption[this.state.currentWordIndex]}</p>
         <Arrow direction="right" clickFunction={ this.nextSlide } glyph="&#9654;" />
 			</div>
